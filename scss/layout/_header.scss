@@ -72,5 +72,14 @@
     .hamburger {
         display: flex;
     }
+    
+    .header-actions {
+        gap: 0.4rem;
+    }
+    
+    .header-logo strong {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
 }
 
