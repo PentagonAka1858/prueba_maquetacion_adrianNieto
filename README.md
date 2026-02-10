@@ -1,8 +1,3 @@
-o Cómo ejecutar
-o Decisiones de layout (Grid / Flex)
-o Enfoque de accesibilidad (qué has hecho y por qué)
-o Qué mejorarías con más tiempo
-
 # Prueba maquetación Knowmadmood - Adrián Nieto Zampaña
 
 # Table of contents
