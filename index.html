@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prueba maquetación Knowmadmood 2026">
+    <meta name="author" content="Adrián Nieto Zampaña">
+    <title>Knowmadmood</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    <!-- CABECERA -->
+    <header class="header">
+        <a href="./index.html" class="header-logo" aria-label="Go to home page">
+            <strong>Knowmadmood</strong>
+        </a>
+
+        <div class="header-actions">
+            <!-- Menú hamburguesa (solo mobile) -->
+            <button
+            class="hamburger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidebar-nav"
+            >
+                <span class="hamburger-lines" aria-hidden="true">☰</span>
+            </button>
+
+            <nav class="header-nav" aria-label="Acciones de usuario">
+                <ul class="header-nav-list">
+                    <li><a href="#login" class="header-link">Login</a></li>
+                    <li><a href="#register" class="header-link">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ASIDE / DRAWER -->
+    <aside id="sidebar-nav" class="sidebar" aria-label="Principal navigation menu">
+        <!-- Botón cerrar (solo móvil) -->
+        <button
+            class="sidebar-close"
+            type="button"
+            aria-label="Close navigation menu"
+            title="Close navigation menu"
+        >
+            <span aria-hidden="true">✕</span>
+        </button>
+        
+        <nav aria-label="Main pages">
+            <ul class="sidebar-list">
+                <li>
+                <a href="#home" class="sidebar-link" aria-current="page">
+                    <span class="sidebar-icon" aria-hidden="true">🏠</span>
+                    Home
+                </a>
+                </li>
+                <li>
+                <a href="#about" class="sidebar-link">
+                    <span class="sidebar-icon" aria-hidden="true">💬</span>
+                    About
+                </a>
+                </li>
+                <li>
+                <a href="#contact" class="sidebar-link">
+                    <span class="sidebar-icon" aria-hidden="true">✉️</span>
+                    Contact
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <!-- MAIN -->
+    <main class="main" id="main-content">
+        <section class="main-info" aria-labelledby="page-title">
+            <h1 id="page-title">Home</h1>
+            <p class="main-subtitle">Welcome to the home page</p>
+        </section>
+        
+        <section class="filters" aria-labelledby="filters-label">
+            <h2 id="filters-label" class="visually-hidden">Filter posts by category</h2>
+            <div class="filters-list" role="group" aria-label="Filter's category">
+                <button
+                    class="filters-btn filters-btn--active"
+                    type="button"
+                    aria-label="All posts, clear filters"
+                    aria-pressed="true"
+                    data-filter="all"
+                >
+                    All posts
+                </button>
+                <button
+                    class="filters-btn"
+                    type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-filter="art"
+                >
+                    Art
+                </button>
+                <button
+                    class="filters-btn"
+                    type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-filter="development"
+                >
+                    Development
+                </button>
+                <button
+                    class="filters-btn"
+                    type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-filter="lifestyle"
+                >
+                    LifeStyle
+                </button>
+                <button
+                    class="filters-btn"
+                    type="button"
+                    role="checkbox"
+                    aria-checked="false"
+                    data-filter="accessories"
+                >
+                    Accessories
+                </button>
+            </div>
+        </section>
+        
+        <!-- Listado de posts -->
+        <section aria-labelledby="posts-heading">
+            <h2 id="posts-heading">Latest Posts</h2>
+
+            <!-- Mensaje para resultados vacíos (para accesibilidad)-->
+            <div
+                id="no-results"
+                class="no-results"
+                role="status"
+                aria-live="polite"
+                hidden
+            >
+                <p>No articles found in this category.</p>
+            </div>
+
+            <div class="cards-grid" role="list">
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/31/400/300" alt="Descriptive text for post 1 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 1</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 1">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/32/400/300" alt="Descriptive text for post 2 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 2</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 2">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/33/400/300" alt="Descriptive text for post 3 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 3</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 3">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/34/400/300" alt="Descriptive text for post 4 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 4</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 4">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/35/400/300" alt="Descriptive text for post 5 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 5</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 5">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/36/400/300" alt="Descriptive text for post 6 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 6</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 6">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/37/400/300" alt="Descriptive text for post 7 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 7</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 7">Read more</a>
+                    </div>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/id/38/400/300" alt="Descriptive text for post 8 image" loading="lazy">
+                    <div class="card-body">
+                        <h3>Post 8</h3>
+                        <ul class="tags" aria-label="Categories">
+                            <li class="tag">Art</li>
+                            <li class="tag">Development</li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolor.</p>
+                        <a href="#" class="btn-read" aria-label="Read more about Post 8">Read more</a>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Knowmadmood</p>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
