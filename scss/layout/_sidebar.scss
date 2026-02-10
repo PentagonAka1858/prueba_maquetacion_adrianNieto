@@ -1,0 +1,83 @@
+@use '../variables' as *;
+
+.sidebar {
+    padding: 1rem;
+    background-color: $color-sidebar-bg;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+}
+
+.sidebar-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.3rem;
+    text-decoration: none;
+    color: $color-text-sidebar;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        color: $color-text-sidebar-accent;
+    }
+}
+
+    .sidebar-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        line-height: 1;
+}
+
+.sidebar-close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        visibility: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100dvh;
+        z-index: 100;
+
+        // hidden by default, shown when JS adds .is-open
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 4px 0 16px rgba(0, 0, 0, 0.1);
+
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+
+    .sidebar-close {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        color: $color-text-header-secondary;
+        padding: 0.25rem;
+        line-height: 1;
+
+        &:hover {
+            color: $color-text-header-primary;
+        }
+    }
+}

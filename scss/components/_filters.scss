@@ -1,0 +1,33 @@
+@use '../variables' as *;
+
+.filters-list {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.filters-btn {
+    padding: 0.5rem 1rem;
+    background-color: $color-bg-filter;
+    color: $color-text-primary;
+    border: 0.5px solid $color-bg-text;
+    border-radius: 10px;
+    
+    font-size: 1rem;
+    
+    &.filters-btn--active {
+        background-color: $color-bg-filter-active;
+        color: $color-bg-text-active;
+        
+        &:hover{
+            color: $color-bg-text;
+            background-color: $color-bg-filter;
+        }
+    }
+    
+    &:hover {
+        background-color: $color-bg-filter-accent;
+        color: $color-bg-text-active;
+    }
+}
+
+
