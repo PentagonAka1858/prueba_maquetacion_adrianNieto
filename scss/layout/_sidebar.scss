@@ -52,7 +52,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 280px;
+        width: fit-content;
         height: 100dvh;
         z-index: 100;
 
@@ -67,6 +67,7 @@
     }
 
     .sidebar-close {
+        display: block;
         align-self: flex-end;
         background: none;
         border: none;
