@@ -1,0 +1,22 @@
+// Reset para content box, padding y margin
+@use 'base/reset';
+
+// Grid principal
+@use 'layout/grid';
+
+// Elementos de layout
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/sidebar';
+
+// Elementos dentro del elemento main
+@use 'layout/main';
+@use 'components/filters';
+@use 'layout/cards-grid';
+@use 'components/card';
+
+// Clases de utilidad (como visually-hidden)
+@use 'utilities/utilities';
+
+// Variables usadas
+@use 'variables' as *;
