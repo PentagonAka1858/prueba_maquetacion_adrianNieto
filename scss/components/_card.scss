@@ -1,0 +1,57 @@
+@use '../variables' as *;
+
+.card {
+    
+    background-color: $color-sidebar-bg;
+    padding: 1rem;
+    
+    img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    
+    h3 {
+        margin: 0.7rem 0 0 0;
+    }
+    
+    p {
+        hyphens: auto;
+        text-align: justify;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.tag {
+    list-style: none;
+    padding: 0 0.7rem;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-read {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
