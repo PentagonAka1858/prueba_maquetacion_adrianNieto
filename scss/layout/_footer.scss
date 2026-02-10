@@ -1,0 +1,10 @@
+@use '../variables' as * ;
+
+.footer {
+    grid-area: footer;
+    background-color: $color-headerfooter-bg;
+    color: $color-text-header-primary;
+    padding: 1rem;
+    
+    width: 100%;
+}
