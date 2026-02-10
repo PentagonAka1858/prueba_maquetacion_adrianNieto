@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template-areas:    
+        "header header"
+        "aside main"
+        "footer footer";
+        
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header{
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* CARDS LAYOUT*/
+
+
+/* MEDIA QUERY MOVIL PARA ASIDE*/
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:    
+            "header"
+            "aside"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    #sidebar-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+}
