@@ -1,0 +1,6 @@
+# Dependencias npm
+node_modules/
+
+# CSS autocompilado por scss (pero se mantiene la carpeta para subir a repo)
+css/*
+!css/.gitkeep
