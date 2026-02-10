@@ -61,7 +61,10 @@ function filterPosts() {
     const activeFilters = [...document.querySelectorAll('.filters-btn--active')]
         .map(btn => btn.dataset.filter)
         .filter(f => f !== 'all');
-    console.log(activeFilters);
+    
+    // Debug
+        //console.log(activeFilters);
+    
     const cards = document.querySelectorAll('.card');
     const noResults = document.getElementById('no-results');
 
